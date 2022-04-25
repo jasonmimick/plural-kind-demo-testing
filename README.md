@@ -131,4 +131,54 @@ exit status 1
 
 
 
+# Tools Versions
 
+Here's the output for my tool versions:
+
+```
+./tool-versions.sh 
++ docker version
+Client:
+ Version:           20.10.12
+ API version:       1.41
+ Go version:        go1.16.15
+ Git commit:        e91ed5707e
+ Built:             Mon Mar 21 06:17:35 2022
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+
+Server:
+ Engine:
+  Version:          20.10.12
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.16.15
+  Git commit:       459d0df
+  Built:            Mon Mar 21 06:18:08 2022
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v1.4.12
+  GitCommit:        7b11cfaabd73bb80907dd23182b9347b4245eb5d
+ runc:
+  Version:          1.0.2
+  GitCommit:        
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
++ kind version
+kind v0.12.0 go1.17.8 linux/amd64
++ kubectl version
+Client Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.0", GitCommit:"2bd9643cee5b3b3a5ecbd3af49d09018f0773c77", GitTreeState:"clean", BuildDate:"2019-09-18T14:36:53Z", GoVersion:"go1.12.9", Compiler:"gc", Platform:"linux/amd64"}
+The connection to the server 127.0.0.1:46291 was refused - did you specify the right host or port?
++ plural version
+Plural CLI:
+  Version: 0.1.1
+  Git Commit: fd3f29f
+  Compiled At: 2022-04-25 10:46:54.364377106 -0400 EDT m=+0.013948280
+  OS: linux
+  Arch: amd64
++ terraform version
+Terraform v1.1.9
+on linux_amd64
+```
