@@ -20,6 +20,46 @@ _or_ is there a way to pass these values to `plural deploy`?
 
 # Findings
 
+In this example, we ran:
+
+```
+./plural-demo demo-one-a
+```
+
+Here's the generated context.yaml:
+
+```
+apiVersion: plural.sh/v1alpha1
+kind: Context
+spec:
+  bundles:
+  - repository: console
+    name: console-kind
+  configuration:
+    bootstrap: {}
+    console:
+      admin_email: jmimick@gmail.com
+      admin_name: Jason
+      console_dns: console.demo-one-a.onplural.sh
+      git_email: jmimick@gmail.com
+      git_user: jasonmimick
+      passphrase: ""
+      private_key: |
+        -----BEGIN OPENSSH PRIVATE KEY-----
+OMITTED
+        -----END OPENSSH PRIVATE KEY-----
+      public_key: |
+OMITTED
+      repo_url: git@github.com:jasonmimick/demo-one-a.git
+    etcd: {}
+    ingress-nginx: {}
+    minio:
+      consoleHostname: minio-console.demo-one-a.onplural.sh
+      hostname: minio.demo-one-a.onplural.sh
+    monitoring: {}
+    postgres:
+      wal_bucket: demo-one-a-demo-one-a-postgres-wal
+```
 - First time when the `plural build` command runs, seeing a error 
 graphql and gcp. We didn't select anything GCP related:
 
@@ -61,7 +101,7 @@ exit status 1
 ```
 
 
-Upon checking /demo-one-a/bootstrap/terraform/main.tf` we see:
+Upon checking `/demo-one-a/bootstrap/terraform/main.tf` we see:
 
 ```
  39 ### BEGIN MANUAL SECTION <<gcp-bootstrap>>                            
